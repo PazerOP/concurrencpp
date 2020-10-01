@@ -5,6 +5,7 @@ add_executable(
 	synchronous_web_socket
 	src/main.cpp
 	src/mock_web_socket.cpp
+	src/mock_web_socket.h
 )
 
 target_link_libraries(synchronous_web_socket concurrencpp)

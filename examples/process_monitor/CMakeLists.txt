@@ -5,6 +5,7 @@ add_executable(
 	process_monitor
 	src/main.cpp
 	src/mock_process_monitor.cpp
+	src/mock_process_monitor.h
 )
 
 target_link_libraries(process_monitor concurrencpp)

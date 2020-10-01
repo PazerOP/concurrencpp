@@ -5,16 +5,20 @@ add_executable(
 	tests
 	main.cpp
 	helpers/assertions.cpp
+	helpers/assertions.h
 	helpers/object_observer.cpp
+	helpers/object_observer.h
+	helpers/random.h
+	helpers/result_generator.h
+	helpers/thread_helpers.h
 
 	tester/tester.cpp
+	tester/tester.h
 
-	tests/all_tests.cpp
-	tests/runtime_tests.cpp
+	tests/coroutine_tests/coroutine_promises_test.cpp
+	tests/coroutine_tests/coroutines_tests.cpp
 
-	tests/timer_tests/timer_tests.cpp
-	tests/timer_tests/timer_queue_tests.cpp
-
+	tests/executor_tests/executor_test_helpers.h
 	tests/executor_tests/inline_executor_tests.cpp
 	tests/executor_tests/manual_executor_tests.cpp
 	tests/executor_tests/thread_executor_tests.cpp
@@ -29,8 +33,18 @@ add_executable(
 	tests/result_tests/when_all_tests.cpp
 	tests/result_tests/when_any_tests.cpp
 
-	tests/coroutine_tests/coroutine_promises_test.cpp
-	tests/coroutine_tests/coroutines_tests.cpp
+	tests/test_utils/executor_shutdowner.h
+	tests/test_utils/proxy_coro.h
+	tests/test_utils/result_factory.h
+	tests/test_utils/test_executors.h
+	tests/test_utils/test_ready_result.h
+
+	tests/timer_tests/timer_tests.cpp
+	tests/timer_tests/timer_queue_tests.cpp
+
+	tests/all_tests.cpp
+	tests/all_tests.h
+	tests/runtime_tests.cpp
 )
 
 target_link_libraries(tests concurrencpp)

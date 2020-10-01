@@ -5,6 +5,7 @@ add_executable(
 	async_sql
 	src/main.cpp
 	src/mock_async_sql.cpp
+	src/mock_async_sql.h
 )
 
 target_link_libraries(async_sql concurrencpp)
